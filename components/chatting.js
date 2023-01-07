@@ -16,6 +16,8 @@ router.post('/sendmessage/:phone', async (req,res) => {
     let phone = req.params.phone;
     let message = req.body.message;
 
+    console.log(phone);
+
     if (phone == undefined || message == undefined) {
         res.send({ status:"error", message:"please enter valid phone and message" })
     } else {
